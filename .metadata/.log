@@ -1,0 +1,37 @@
+!SESSION 2016-10-01 18:50:39.100 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 1 1 2016-10-01 18:51:46.203
+!MESSAGE Workbench migration started
+
+!ENTRY org.eclipse.ui 1 1 2016-10-01 18:51:55.246
+!MESSAGE Workbench migration finished
+!SESSION 2016-10-01 18:58:09.031 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 2 2016-10-01 19:25:43.436
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-10-01 19:25:43.436
+!MESSAGE The project description file (.project) for 'TP1-Statistical Cryptoanalysis' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.jface.text 2 0 2016-10-01 19:27:49.547
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-10-01 19:27:49.548
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-10-01 19:27:49.973
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-10-01 19:27:49.980
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
