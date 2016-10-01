@@ -11,7 +11,12 @@ public class CaesarCypher {
 
 		return encrypted;
 	}
+	
+	public static String decrypt(String decrypted, int shift) {
+		return encrypt(decrypted, -shift);
+	}
 
+	// Class to shift a char with a given shift
 	public static char shiftChar(char c, int shift) {
 
 		int tmp = c;
@@ -36,11 +41,11 @@ public class CaesarCypher {
 		// char is upper case
 		else if (tmp >= A && tmp <= Z) {
 			tmp += shift;
-			// shift to high -> begin shifting from a
+			// shift to high -> begin shifting from A
 			if (tmp > Z) {
 				tmp = A + (tmp - Z) - 1;
 			}
-			// shift to low -> begin shifting from z
+			// shift to low -> begin shifting from Z
 			else if (tmp < A) {
 				tmp = Z + (tmp - A) + 1;
 			}
