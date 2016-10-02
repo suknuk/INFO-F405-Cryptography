@@ -1,6 +1,6 @@
 package cryptoPackage;
 
-public class CaesarCypher {
+public class CaesarCipher {
 
 	// ascii codes of alphabet
 	static int a = 'a';
