@@ -27,6 +27,9 @@ public class TestingClass {
 		max_length_possible = Math.min(max_length_possible, b5.length);
 		max_length_possible = Math.min(max_length_possible, b6.length);
 		max_length_possible = Math.min(max_length_possible, b7.length);
+		max_length_possible = Math.min(max_length_possible, b8.length);
+		max_length_possible = Math.min(max_length_possible, b9.length);
+		max_length_possible = Math.min(max_length_possible, b10.length);
 		
 		//main comparing string
 		byte[] compareWithMe = Arrays.copyOfRange(b1, 0, max_length_possible);
@@ -39,14 +42,16 @@ public class TestingClass {
 		byte[] xored5 = xorMe(compareWithMe, Arrays.copyOfRange(b5, 0, max_length_possible));
 		byte[] xored6 = xorMe(compareWithMe, Arrays.copyOfRange(b6, 0, max_length_possible));
 		byte[] xored7 = xorMe(compareWithMe, Arrays.copyOfRange(b7, 0, max_length_possible));
+		byte[] xored8 = xorMe(compareWithMe, Arrays.copyOfRange(b8, 0, max_length_possible));
+		byte[] xored9 = xorMe(compareWithMe, Arrays.copyOfRange(b9, 0, max_length_possible));
+		byte[] xored10 = xorMe(compareWithMe, Arrays.copyOfRange(b10, 0, max_length_possible));
 
 		// guessing a phrase
-		String guessingWord = "Sofia is the capital of Bulgaria. ";
+		String guessingWord = "the territory of ";
 		byte[] the_byte = guessingWord.getBytes();  
 		
-		//printComparison(122,the_byte,xored2);
-		int position = 0;
-		System.out.print(position+ " ");
+		
+		int position = 77;
 		printComparison(position,the_byte,xored1);
 		printComparison(position,the_byte,xored2);
 		printComparison(position,the_byte,xored3);
@@ -54,6 +59,9 @@ public class TestingClass {
 		printComparison(position,the_byte,xored5);
 		printComparison(position,the_byte,xored6);
 		printComparison(position,the_byte,xored7);
+		//printComparison(position,the_byte,xored8);
+		//printComparison(position,the_byte,xored9);
+		//printComparison(position,the_byte,xored10);
 		System.out.println();
 		
 		/*
@@ -72,6 +80,9 @@ public class TestingClass {
 			printComparison(i,the_byte,xored5);
 			printComparison(i,the_byte,xored6);
 			printComparison(i,the_byte,xored7);
+			printComparison(i,the_byte,xored8);
+			printComparison(i,the_byte,xored9);
+			printComparison(i,the_byte,xored10);
 			System.out.println();
 		}*/
 	}
@@ -79,7 +90,7 @@ public class TestingClass {
 	public static void printComparison(int position, byte[] guessingWord , byte[] xored){
 		byte[] sub_xored = Arrays.copyOfRange(xored, position, position + guessingWord.length);
 		byte[] aResult = xorMe(sub_xored, guessingWord);
-		System.out.print(new String(aResult) + " || ");
+		System.out.println(new String(aResult) + " || ");
 	}
 	
 	// xor of two byte arrays with the same length
