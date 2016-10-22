@@ -27,12 +27,12 @@ public class TestingClass {
 		max_length_possible = Math.min(max_length_possible, b5.length);
 		max_length_possible = Math.min(max_length_possible, b6.length);
 		max_length_possible = Math.min(max_length_possible, b7.length);
-		max_length_possible = Math.min(max_length_possible, b8.length);
-		max_length_possible = Math.min(max_length_possible, b9.length);
-		max_length_possible = Math.min(max_length_possible, b10.length);
+		//max_length_possible = Math.min(max_length_possible, b8.length);
+		//max_length_possible = Math.min(max_length_possible, b9.length);
+		//max_length_possible = Math.min(max_length_possible, b10.length);
 		
 		//main comparing string
-		byte[] compareWithMe = Arrays.copyOfRange(b1, 0, max_length_possible);
+		byte[] compareWithMe = Arrays.copyOfRange(b6, 0, max_length_possible);
 		
 		// xoring the strings
 		byte[] xored1 = xorMe(compareWithMe, Arrays.copyOfRange(b1, 0, max_length_possible));
@@ -47,11 +47,10 @@ public class TestingClass {
 		byte[] xored10 = xorMe(compareWithMe, Arrays.copyOfRange(b10, 0, max_length_possible));
 
 		// guessing a phrase
-		String guessingWord = "the territory of ";
+		String guessingWord = "confirm the development of link-level acknowledgements, which embodies the confirmed principle";
 		byte[] the_byte = guessingWord.getBytes();  
 		
-		
-		int position = 77;
+		int position = 223;
 		printComparison(position,the_byte,xored1);
 		printComparison(position,the_byte,xored2);
 		printComparison(position,the_byte,xored3);
