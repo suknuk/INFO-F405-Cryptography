@@ -32,17 +32,17 @@ public class TestingClass {
 		
 		//only iterate until the smallest one is at the end
 		int max_length_possible = Math.min(b1.length, b2.length);
-		max_length_possible = Math.min(max_length_possible, b3.length);
-		max_length_possible = Math.min(max_length_possible, b4.length);
+		//max_length_possible = Math.min(max_length_possible, b3.length);
+		//max_length_possible = Math.min(max_length_possible, b4.length);
 		//max_length_possible = Math.min(max_length_possible, b5.length);
-		max_length_possible = Math.min(max_length_possible, b6.length);
-		max_length_possible = Math.min(max_length_possible, b7.length);
-		//max_length_possible = Math.min(max_length_possible, b8.length);
+		//max_length_possible = Math.min(max_length_possible, b6.length);
+		//max_length_possible = Math.min(max_length_possible, b7.length);
+		max_length_possible = Math.min(max_length_possible, b8.length);
 		//max_length_possible = Math.min(max_length_possible, b9.length);
 		//max_length_possible = Math.min(max_length_possible, b10.length);
 		
 		//main comparing string
-		byte[] compareWithMe = Arrays.copyOfRange(b6, 0, max_length_possible);
+		byte[] compareWithMe = Arrays.copyOfRange(b8, 0, max_length_possible);
 		
 		// xoring the strings
 		byte[] xored1 = xorMe(compareWithMe, Arrays.copyOfRange(b1, 0, max_length_possible));
@@ -57,21 +57,21 @@ public class TestingClass {
 		byte[] xored10 = xorMe(compareWithMe, Arrays.copyOfRange(b10, 0, max_length_possible));
 
 		// guessing a phrase
-		String guessingWord = "iples of e-voting technology. In our research, we investigate how von Neumann machines can be applied to the improve";
+		String guessingWord = "рица,"+'\n'+"Це";
 		byte[] the_byte = guessingWord.getBytes();  
+		// e h i n s t w
 		
-		System.out.println(guessingWord.length());
+		//System.out.println(guessingWord.length());
 		
-		int position = 313;
+		int position = 472;
 		printComparison(position,the_byte,xored1);
 		printComparison(position,the_byte,xored2);
-		printComparison(position,the_byte,xored3);
-		printComparison(position,the_byte,xored4);
+		//printComparison(position,the_byte,xored3);
+		//printComparison(position,the_byte,xored4);
 		//printComparison(position,the_byte,xored5);
-		System.out.println();
-		printComparison(position,the_byte,xored6);
-		printComparison(position,the_byte,xored7);
-		//printComparison(position,the_byte,xored8);
+		//printComparison(position,the_byte,xored6);
+		//printComparison(position,the_byte,xored7);
+		printComparison(position,the_byte,xored8);
 		//printComparison(position,the_byte,xored9);
 		//printComparison(position,the_byte,xored10);
 		System.out.println();
