@@ -42,7 +42,7 @@ public class TestingClass {
 		//max_length_possible = Math.min(max_length_possible, b10.length);
 		
 		//main comparing string
-		byte[] compareWithMe = Arrays.copyOfRange(b8, 0, max_length_possible);
+		byte[] compareWithMe = Arrays.copyOfRange(b1, 0, max_length_possible);
 		
 		// xoring the strings
 		byte[] xored1 = xorMe(compareWithMe, Arrays.copyOfRange(b1, 0, max_length_possible));
@@ -57,15 +57,23 @@ public class TestingClass {
 		byte[] xored10 = xorMe(compareWithMe, Arrays.copyOfRange(b10, 0, max_length_possible));
 
 		// guessing a phrase
-		String guessingWord = "рица,"+'\n'+"Це";
+		String guessingWord = "Sofia is the capital of Bulgaria. More than 1.2 million people live there" + '\n' + 
+				"on the territory of 490 square kilometers. Which makes this city one of the largest in the country." + '\n' + 
+				"The city is suituated in the West of Bulgaria. Sofia is surrounded by mountains." + '\n' + 
+				"Sofia is in the UTC+2 time zone." + '\n' + 
+				"Sofia has many tourst attractions, among them are" + '\n' + 
+				"National Assembly Square, National Palace of Culture, Saint Sofia Church, Statue of Saint Sofia, Tsarigradsko shose and Capital Fort." + '\n' + 
+				"Try to learn ";
 		byte[] the_byte = guessingWord.getBytes();  
 		// e h i n s t w
 		
-		//System.out.println(guessingWord.length());
+		//System.out.println(max_length_possible);
 		
-		int position = 472;
+		int position = 0;
 		printComparison(position,the_byte,xored1);
+		System.out.println();
 		printComparison(position,the_byte,xored2);
+		System.out.println();
 		//printComparison(position,the_byte,xored3);
 		//printComparison(position,the_byte,xored4);
 		//printComparison(position,the_byte,xored5);
@@ -83,8 +91,9 @@ public class TestingClass {
 		*/
 		
 		/*
-		for (int i = 0; i < max_length_possible - guessingWord.length(); i++){
+		for (int i = 472; i < max_length_possible - guessingWord.length(); i++){
 			System.out.print(i+ " ");
+			
 			printComparison(i,the_byte,xored1);
 			printComparison(i,the_byte,xored2);
 			printComparison(i,the_byte,xored3);
@@ -96,7 +105,8 @@ public class TestingClass {
 			printComparison(i,the_byte,xored9);
 			printComparison(i,the_byte,xored10);
 			System.out.println();
-		}*/
+		}
+		*/
 	}
 
 	public static void printComparison(int position, byte[] guessingWord , byte[] xored){
